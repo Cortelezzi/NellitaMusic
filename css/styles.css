@@ -1,0 +1,146 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  color: #fff;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #b993d6, #8ca6db, #a18cd1, #fbc2eb);
+  background-size: 400% 400%;
+  animation: movimiento 10s ease infinite;
+}
+
+@keyframes movimiento {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.reproductor {
+  gap: 3rem;
+  padding: 2rem;
+  display: flex;
+  border-radius: 1rem;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2rem) saturate(150%);
+  transition: transform 0.3s ease;
+}
+
+.reproductor:hover {
+  transform: scale(1.02);
+}
+
+.reproductor__img {
+  width: 25rem;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.reproductor__img--pausa {
+  transform: scale(0.8);
+}
+
+.reproductor__cancion {
+  align-self: flex-start;
+}
+
+.reproductor__cancion-nombre,
+.reproductor__cancion-autor {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.reproductor__cancion-nombre {
+  font-weight: 700;
+}
+
+.reproductor__cancion-autor {
+  opacity: .8;
+  font-weight: 300;
+}
+
+.reproductor__barra {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reproductor__progreso {
+  height: 0.8rem;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 0.5rem;
+  background: rgba(165, 165, 165, 0.4);
+}
+
+.reproductor__progreso::-webkit-slider-thumb {
+  appearance: none;
+  background: #fff;
+  width: 1rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  box-shadow: 0 6px 10px rgba(228, 228, 228, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.reproductor__progreso::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.reproductor__controles {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.reproductor__tiempo {
+  opacity: .5;
+  display: flex;
+  font-size: 1.3rem;
+  justify-content: space-between;
+}
+
+.reproductor__controles button {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background: none;
+  font-size: 3.5rem;
+  transition: transform 0.2s ease;
+}
+
+.reproductor__controles button:hover {
+  transform: scale(1.1);
+}
+
+.reproductor__controles-iniciar i {
+  font-size: 6rem;
+}
+
+.reproductor__footer {
+  opacity: 0.4;
+  margin: -4rem 0 0;
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-align: center;
+}

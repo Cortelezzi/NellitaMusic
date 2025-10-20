@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nellita Music</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="css/normalize.css" as="style">
+  <link rel="stylesheet" href="css/normalize.css">
+
+  <link rel="preload" href="css/styles.css" as="style">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <link rel="icon" href="img/icon.png" type="image/x-icon">
+
+</head>
+
+<body>
+  <section class="reproductor">
+    <img src="img/background.jpg" alt="" class="reproductor__img">
+    <div class="reproductor__cancion">
+      <h1 class="reproductor__cancion-nombre">Nombre</h1>
+      <p class="reproductor__cancion-autor">Autor</p>
+    </div>
+    <audio id="cancion">
+      <source src="songs/Gustavo Cerati - Vivo (Official Audio).mp3" type="audio/mpeg">
+    </audio>
+    <div class="reproductor__barra">
+      <input id="progreso" class="reproductor__progreso" type="range" value="0" id="progreso">
+      <div class="reproductor__tiempo">
+        <span id="tiempoActual">0:00</span>
+        <span id="tiempoRestante">0:00</span>
+      </div>
+    </div>
+    <div class="reproductor__controles">
+      <button class="reproductor__controles-atras"><i class="bi bi-rewind-fill"></i></button>
+      <button class="reproductor__controles-iniciar"><i id="iconoControl" class="bi bi-play-fill"></i></button>
+      <button class="reproductor__controles-siguiente"><i class="bi bi-fast-forward-fill"></i></button>
+    </div>
+    <h2 class="reproductor__footer">Hecho con mucho amor, te amo.</h2>
+  </section>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
