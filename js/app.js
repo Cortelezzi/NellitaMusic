@@ -37,7 +37,7 @@ const canciones = [
     src: 'songs/Soda Stereo - Signos (Gira Me Verás Volver).mp3'
   },
   {
-    nombre: 'Tu Cicatriz En Mi.mp3',
+    nombre: 'Tu Cicatriz En Mi',
     autor: 'Gustavo Cerati',
     src: 'songs/Tu Cicatriz En Mi.mp3'
   }
